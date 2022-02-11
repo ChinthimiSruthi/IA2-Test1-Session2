@@ -44,8 +44,9 @@ void out_put(int sum)
 
 int main()
 {
-  int n,a[n],sum;
+  int n,sum;
   n=input_array_size();
+  int a[n];
   input_array(n,a);
   is_composite(n);
   sum=sum_composite_numbers(n,a);
