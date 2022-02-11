@@ -20,10 +20,9 @@ Breakpoint 1 at 0x86f: file p5final.c, line 38.
 (gdb) r
 Starting program: /home/runner/IA2-Test1-Session2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
-
+s
 Breakpoint 1, main () at p5final.c:38
 38    a=input();
-(gdb) 
 (gdb) s
 input () at p5final.c:3
 3   {
@@ -45,7 +44,7 @@ main () at p5final.c:39
 (gdb) s
 input () at p5final.c:3
 3   {
-(gdb) s
+(gdb) n
 5     printf("Enter a number\n");
 (gdb) n
 Enter a number
@@ -84,8 +83,8 @@ G.C.D of 2 and 4 is 2
 main () at p5final.c:42
 42    return 0;
 (gdb) n
-44  }
+43    }
 (gdb) c
 Continuing.
-[Inferior 1 (process 621) exited normally]
+[Inferior 1 (process 437) exited normally]
 (gdb) 
