@@ -1,0 +1,91 @@
+ gcc -g p5final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x86f: file p5final.c, line 38.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5final.c:38
+38    a=input();
+(gdb) 
+(gdb) s
+input () at p5final.c:3
+3   {
+(gdb) s
+5     printf("Enter a number\n");
+(gdb) n
+Enter a number
+6     scanf("%d",&a);
+(gdb) n
+2
+7     return a;
+(gdb) n
+8   }
+(gdb) p a
+$1 = 2
+(gdb) n
+main () at p5final.c:39
+39    b=input();
+(gdb) s
+input () at p5final.c:3
+3   {
+(gdb) s
+5     printf("Enter a number\n");
+(gdb) n
+Enter a number
+6     scanf("%d",&a);
+(gdb) n
+4
+7     return a;
+(gdb) n
+8   }
+(gdb) p a
+$2 = 4
+(gdb) n
+main () at p5final.c:40
+40    gcd=find_gcd(a,b);
+(gdb) s
+find_gcd (a=2, b=4) at p5final.c:12
+12    if(a>b)
+(gdb) n
+18    if(b%a == 0)
+(gdb) n
+20      return a;
+(gdb) n
+30  }
+(gdb) p a
+$3 = 2
+(gdb) n
+main () at p5final.c:41
+41    output(a,b,gcd);
+(gdb) s
+output (a=2, b=4, gcd=2) at p5final.c:33
+33    printf("G.C.D of %d and %d is %d\n",a,b,gcd);
+(gdb) n
+G.C.D of 2 and 4 is 2
+34  }
+(gdb) n
+main () at p5final.c:42
+42    return 0;
+(gdb) n
+44  }
+(gdb) c
+Continuing.
+[Inferior 1 (process 621) exited normally]
+(gdb) 
