@@ -40,5 +40,4 @@ int main()
   gcd=find_gcd(a,b);
   output(a,b,gcd);
   return 0;
-
-}
+  }
