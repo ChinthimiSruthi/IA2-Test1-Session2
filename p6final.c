@@ -26,7 +26,7 @@ void revstr (char *a)
 }
 void output (char *a)
 {
-  printf ("The reverse of string is %s\n",a);
+  printf ("%s\n",a);
 }
 int main ()
 {
