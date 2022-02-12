@@ -6,12 +6,9 @@ void input_string (char *a)
 }
 int string_length (char *a)
 {
-  int j = 0;
-  while (a[j] != '\0')
-  {
-    j++;
-  }
-  return j;
+  int i;
+  for(i=0;a[i]!='\0';i++);
+  return i;
 }
 void revstr (char *a)
 {
